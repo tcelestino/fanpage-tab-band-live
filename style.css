@@ -1,0 +1,418 @@
+/*
+Theme Name: SouMaisPelegrino
+Theme URI: http://soupelegrino13.com.br
+Author: 
+Author URI: 
+Description:
+Version: 1.0
+*/
+
+/** 
+* HTML Elements
+* 
+*/
+html {
+  	font-size: 100%;
+  	font-smoothing: antialiased;
+  	-webkit-text-size-adjust: 100%;
+  	-webkit-font-smoothing: antialiased;
+  	-ms-text-size-adjust: 100%;
+	-moz-font-smoothing: antialiased;	
+}
+body {
+	margin: 0;
+	padding: 10px 0 0;
+	background: #fff;
+	font-family: Tahoma, Helvetica, sans-serif;
+
+}
+h1, 
+h2, 
+h3, 
+h4, 
+h5 {
+	margin: 0;
+	padding: 0;
+}
+ul,
+ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+img,
+embed,
+object,
+video { max-width: 100%; }
+a { text-decoration: none; }
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a:hover,
+a:active,
+a:visited {
+	outline: 0;
+	text-decoration: none;
+}
+img {
+  vertical-align: middle;
+  border: 0;
+  outline: none;
+  -ms-interpolation-mode: bicubic;
+}
+
+button,
+input,
+textarea {
+	border: 0;
+	font-size: 100%;
+	vertical-align: middle;
+    line-height: normal;
+
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    *overflow: visible;
+}
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+    *width: 13px;
+    *height: 13px;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+
+/** 
+*	FONT FACE
+*
+* 	@fontdef
+*/
+
+@font-face {
+    font-family: 'RokkittRegular';
+    src: url('media/fonts/rokkitt-regular-webfont.eot');
+    src: url('media/fonts/rokkitt-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('media/fonts/rokkitt-regular-webfont.woff') format('woff'),
+         url('media/fonts/rokkitt-regular-webfont.ttf') format('truetype'),
+         url('media/fonts/rokkitt-regular-webfont.svg#RokkittRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/** 
+* 	CLASSES USUAIS
+* 	todas as classes que podem ser usadas por qualquer elemento
+*/
+
+.alignleft { float: left; } 
+.alignright { float: right; } 
+.hide { display: none; }
+.hr {
+	display: block;
+	width: 100%;
+	height: 11px;
+	background: url(images/hr_bg.png) repeat-x 0 0;
+}
+
+/** image replacement */
+.ir { 
+	display: block; 
+	border: 0; 
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden; 
+	background-color: transparent; 
+	background-repeat: no-repeat; 
+	text-align: left; 
+	direction: ltr; 
+	*line-height: 0;
+}
+
+/** clear */
+.clearfix:before, .clearfix:after { 
+	content: ""; 
+	display: table;
+}
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/** tamanhos */
+.span1 { width: 800px; }
+.span2 { width: 390px; }
+.span3 { width: 335px; }
+.span4 { width: 50px; }
+
+
+.selo,
+.logo,
+#rodape a,
+.social .hashtag { background: url(images/sprites.png) no-repeat; }
+.selo,
+.logo {	z-index: 10;}
+
+
+/**
+*	HOME
+*	formatação da página inicial sem curtir a fanpage
+*/
+.home {	
+	position: relative;
+	height: 368px;
+	text-align: center;
+}
+.home .bg-home, 
+.home .selo,
+.home h1,
+.home p { 
+	position: absolute;
+	left: 0;
+}
+.home .bg-home, 
+.home .selo,
+.home h1 { top: 0; }
+.home .bg-home {
+	z-index: 5;
+	width: 810px;
+	height: 368px;
+	background: #ff9900 url(images/home_bg.png) no-repeat 0 0;
+}
+.home .selo {
+	width: 337px;
+	height: 48px;
+	margin: -10px 0 0 200px;
+	background-position: 0 0;
+}
+.home h1 {
+	width: 420px;
+	height: 168px;
+	margin: 100px 0 0 130px;
+	background-position: 0 -90px;
+}
+.home p {
+	z-index: 10;
+	bottom: 20px;
+	padding: 10px;
+	font: 24px "RokkittRegular", Georgia, Helvetica, sans-serif;
+	letter-spacing: -1px;
+	color: #d1020d;
+}
+
+/**
+*	INTERNA
+*	pagina interna dos streamings
+*/
+.internal {
+	position: relative;
+	margin-top: 20px;
+}
+.internal .selo {
+	position: absolute;
+	width: 700px;
+	height: 50px;
+	margin: -30px 0 0 45px;
+	background-position: 0 -363px;
+}
+.internal .top {
+	width: 100%;
+	height: 312px;
+	background: #ffbe38 url(images/internal_header_bg.png) no-repeat 0 0;
+}
+.internal .top h1 {
+	width: 250px;
+	height: 103px;
+	margin: 10px 40px 0 0; 
+	background-position: -452px -120px;
+}
+.internal .top p {
+	font: 18px "RokkittRegular", Georgia, Helvetica, sans-serif;
+	color: #d1020d;
+}
+.internal .info-streming { 
+	width: 690px;
+	margin: 80px 0 0 65px;
+}
+.internal .info-streming p {
+	float: left;
+	width: 400px;
+}
+.internal .social {
+	width: 700px;
+	margin: 30px auto 0 auto;
+}
+.internal .social .hashtag {
+	width: 283px;
+	height: 34px;
+	margin: 15px 0 0 210px;
+	background-position: -424px -291px;
+}
+.internal .social .share { margin-top: 20px; }
+
+/** streamings socials */
+#streaming {
+	float: left;
+	width: 100%;
+	height: 510px;
+	padding: 20px 0 0;
+	background: #ffb026 url(images/internal_streaming_bg.png) no-repeat 0 0;
+}
+#streaming header,
+#streaming header h2,
+#streaming header a {
+	float:left;
+}
+#streaming header h2,
+#streaming header a {
+	font-family: "RokkittRegular", Georgia, Helvetica, sans-serif;
+	color: #d1020d;
+}
+#streaming header h2 {
+	margin-bottom: 20px;
+	font-size: 35px;
+}
+#streaming header h2 span { 
+	font-size: 12px;
+	text-transform: uppercase;
+}
+#streaming header a {
+	font-size: 19px;
+	margin-top: 10px;
+}
+#streaming .overflow{
+	overflow-y: scroll;
+	height: 440px;
+}
+/** twitter streaming */
+#streaming .twitter {
+	margin-left: 20px;
+}
+#streaming .twitter header a {
+	margin-left: 55px;
+}
+#streaming .twitter ul {
+	padding: 0 15px;
+}
+#streaming .twitter li {
+	float: left;
+	width: 100%;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ea920a;
+}
+#streaming .twitter li p {
+	font-size: 12px;
+	line-height: 16px;
+	color: #660000;
+}
+#streaming .twitter li p a {
+	font-size: 11px;
+	font-weight: bolder;
+	color: #660000;
+}
+#streaming .twitter li p a:hover { text-decoration: underline; }
+#streaming .twitter li p span {
+	font-weight: bolder;
+	color: #d1020d;
+}
+#streaming .twitter li .avatar { margin-right: 8px; }
+
+/** twitter widgets overide */
+#streaming .twitter .twtr-tweets { width: 298px !important; }
+.twtr-widget .twtr-tweet {
+	padding-bottom: 10px !important;
+	margin-bottom: 10px !important;
+	border-bottom: 1px solid #ea920a !important;
+}
+.twtr-tweet-wrap .twtr-avatar,
+.twtr-tweet-wrap .twtr-avatar .twtr-img,
+.twtr-tweet-wrap .twtr-avatar .twtr-img img {
+	width: 50px !important;
+	height: 50px !important;
+}
+.twtr-tweet-wrap .twtr-avatar {	margin-right: 10px !important; }
+.twtr-tweet-wrap .twtr-user {
+	font-weight: bolder;
+	color: #d1020d !important;
+}
+.twtr-tweet-wrap .twtr-user:before {
+	content: '@';
+}
+.twtr-tweet-text {
+	float: left !important;
+	width: 222px !important;
+	margin-left: 0 !important;
+}
+.twtr-tweet-text p {
+	font-size: 12px !important;
+	line-height: 16px !important;
+	color: #660000;
+}
+.twtr-widget em, .twtr-widget .twtr-new-results { display: none !important; }
+
+/** facebook */
+#streaming .facebook {
+	margin-left: 40px;
+}
+#streaming .facebook header a {
+	margin-left: 76px;
+}
+#streaming .facebook .overflow a { color: #fff; }
+
+/**
+*	RODAPE
+*/
+#rodape {
+	float: left;
+	height: 108px;
+	background: rgb(209,2,13); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(209,2,13,1) 0%, rgba(136,14,20,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(209,2,13,1)), color-stop(100%,rgba(136,14,20,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(209,2,13,1) 0%,rgba(136,14,20,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(209,2,13,1) 0%,rgba(136,14,20,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(209,2,13,1) 0%,rgba(136,14,20,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(209,2,13,1) 0%,rgba(136,14,20,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1020d', endColorstr='#880e14',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+#rodape  a {
+	width: 374px;
+	height: 65px;
+	margin: 20px auto 0 auto;
+	background-position: 0 -283px;
+}
